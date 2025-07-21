@@ -69,7 +69,7 @@ export function Cta() {
                 className="pl-2 rounded-lg h-10 lg:h-12 border border-[#45260A] focus:outline-none focus:ring-2 focus:ring-[#45260A] text-sm bg-white"
                 required
               >
-                <option value="" disabled selected>
+                <option value="" disabled defaultValue>
                   Please choose one option
                 </option>
                 <option value="friends">Friends and family</option>

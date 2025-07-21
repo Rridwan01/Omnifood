@@ -10,12 +10,6 @@ export function Nav() {
       if (hero) {
         const scrollPosition = window.scrollY;
         const heroHeight = hero.offsetHeight;
-        console.log(
-          "Scroll Position:",
-          scrollPosition,
-          "Hero Height:",
-          heroHeight
-        );
 
         if (scrollPosition > heroHeight - 100) {
           // Added offset for earlier trigger

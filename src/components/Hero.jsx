@@ -88,8 +88,10 @@ export function Hero() {
               />
             </div>
             <p className="pl-[-150px] text-sm md:text-base font-bold">
-              <span className="font-bold text-sm md:text-base text-[#e67e22]">250,000+</span> meals
-              delivered last year!
+              <span className="font-bold text-sm md:text-base text-[#e67e22]">
+                250,000+
+              </span>{" "}
+              meals delivered last year!
             </p>
           </div>
         </div>
