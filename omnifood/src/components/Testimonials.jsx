@@ -69,18 +69,13 @@ export function Testimonials() {
       </div>
 
       <div className="gallery w-[100%] py-16 px-4">
-        <img src="/img/gallery/gallery-1.jpg" alt="Food Gallery" />
-        <img src="/img/gallery/gallery-2.jpg" alt="Food Gallery" />
-        <img src="/img/gallery/gallery-3.jpg" alt="Food Gallery" />
-        <img src="/img/gallery/gallery-4.jpg" alt="Food Gallery" />
-        <img src="/img/gallery/gallery-5.jpg" alt="Food Gallery" />
-        <img src="/img/gallery/gallery-6.jpg" alt="Food Gallery" />
-        <img src="/img/gallery/gallery-7.jpg" alt="Food Gallery" />
-        <img src="/img/gallery/gallery-8.jpg" alt="Food Gallery" />
-        <img src="/img/gallery/gallery-9.jpg" alt="Food Gallery" />
-        <img src="/img/gallery/gallery-10.jpg" alt="Food Gallery" />
-        <img src="/img/gallery/gallery-11.jpg" alt="Food Gallery" />
-        <img src="/img/gallery/gallery-12.jpg" alt="Food Gallery" />
+        {Array.from({ length: 12 }).map((_, i) => (
+          <img
+            key={i}
+            src={`/img/gallery/gallery-${i + 1}.jpg`}
+            alt="Food Gallery"
+          />
+        ))}
       </div>
     </section>
   );

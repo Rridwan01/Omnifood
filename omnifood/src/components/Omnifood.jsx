@@ -7,6 +7,7 @@ import { Meals } from "./Meals";
 import { Testimonials } from "./Testimonials";
 import { Pricing } from "./Pricing";
 import { Cta } from "./Cta";
+import { Footer } from "./Footer";
 
 export function Omnifood() {
   return (
@@ -19,7 +20,7 @@ export function Omnifood() {
       <Testimonials />
       <Pricing />
       <Cta />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
