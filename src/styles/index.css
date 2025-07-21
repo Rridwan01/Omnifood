@@ -87,7 +87,7 @@ body {
 }
 
 .featured-img {
-  @apply w-auto h-[11px] grayscale opacity-50 brightness-0 sm:h-[18px] md:h-6 xl:h-8;
+  @apply w-auto h-[8px] grayscale opacity-50 brightness-0 sm:h-[18px] md:h-6 xl:h-8;
 }
 
 .how-numbers {

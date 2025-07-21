@@ -4,7 +4,7 @@ export function Cta() {
   return (
     <section
       id="cta"
-      className="mb-16 md:flex items-center justify-center filter brightness-80 saturate-100 hue-rotate-40"
+      className="mb-16 md:flex items-center justify-center filter brightness-80 saturate-100 hue-rotate-40 mr-8"
     >
       <div className="flex flex-col sm:flex-row-reverse my-4 mx-8 w-[90%] md:w-[90%] md:h-[620px] lg:h-[450px] xl:w-[75%] xl:h-[500px] shadow-md rounded-xl bg-[#d98a45]">
         <div className="sm:w-[40%] h-[300px] sm:h-auto md:h-[620px] lg:h-[450px] xl:h-[500px]">

@@ -1,6 +1,14 @@
 import "../styles/index.css";
 
 export function Featured() {
+  const imagesPath = [
+    "techcrunch",
+    "business-insider",
+    "the-new-york-times",
+    "forbes",
+    "usa-today",
+  ];
+
   return (
     <section
       id="featured"
@@ -8,31 +16,14 @@ export function Featured() {
     >
       <div>AS FEATURED IN</div>
       <div className="flex gap-8 xl:gap-12">
-        <img
-          className="featured-img"
-          src="/img/logos/techcrunch.png"
-          alt="Tech Crunch"
-        />
-        <img
-          className="featured-img"
-          src="/img/logos/business-insider.png"
-          alt="Business Insider"
-        />
-        <img
-          className="featured-img"
-          src="/img/logos/the-new-york-times.png"
-          alt="New York Times"
-        />
-        <img
-          className="featured-img"
-          src="/img/logos/forbes.png"
-          alt="Forbes"
-        />
-        <img
-          className="featured-img"
-          src="/img/logos/usa-today.png"
-          alt="USA Today"
-        />
+        {imagesPath.map((imagesPath, i) => (
+          <img
+            key={i}
+            className="featured-img"
+            src={`/img/logos/${imagesPath}.png`}
+            alt={imagesPath}
+          />
+        ))}
       </div>
     </section>
   );

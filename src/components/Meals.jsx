@@ -1,6 +1,17 @@
 import "../styles/index.css";
 
 export function Meals() {
+  const diets = [
+    "Vegetarian",
+    "Vegan",
+    "Pescatarian",
+    "Gluten-free",
+    "Lactose-free",
+    "Keto",
+    "Paleo",
+    "Low FODMAP",
+    "Kid-friendly",
+  ];
   return (
     <section className="py-32">
       <div className="text-center">
@@ -84,20 +95,19 @@ export function Meals() {
             Works with any diet:
           </h3>
           <div className="styled-p">
-            <p>Vegetarian</p>
-            <p>Vegan</p>
-            <p>Pescatarian</p>
-            <p>Gluten-free</p>
-            <p>Lactose-free</p>
-            <p>Keto</p>
-            <p>Paleo</p>
-            <p>Low FODMAP</p>
-            <p>Kid-friendly</p>
+            {diets.map((diets, i) => (
+              <p key={i}>{diets}</p>
+            ))}
           </div>
         </div>
       </div>
       <div className="flex items-start justify-center">
-        <a className="text-[#e67e22] text-sm underline underline-offset-4 hover:no-underline transition-all duration-500 ease-in-out" href="#">See all recipes &rarr;</a>
+        <a
+          className="text-[#e67e22] text-sm underline underline-offset-4 hover:no-underline transition-all duration-500 ease-in-out"
+          href="#"
+        >
+          See all recipes &rarr;
+        </a>
       </div>
     </section>
   );

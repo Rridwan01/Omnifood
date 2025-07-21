@@ -6,7 +6,7 @@ export function Testimonials() {
       id="testimonials"
       className="bg-[#fdf2e9] pt-16 lg:flex xl:gap-32 lg:py-0"
     >
-      <div className="lg:flex flex-col justify-center">
+      <div className="lg:flex flex-col justify-center pr-4">
         <div className="pl-8 xl:pl-[14%]">
           <h2 className="text-[14px] font-semibold text-[#d98a45]">
             TESTIMONIALS
