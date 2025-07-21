@@ -6,7 +6,7 @@ export function Cta() {
       id="cta"
       className="mb-16 md:flex items-center justify-center filter brightness-80 saturate-100 hue-rotate-40"
     >
-      <div className="flex flex-col sm:flex-row-reverse my-4 mx-8 w-[90%] md:w-[90%] md:h-[620px] lg:h-[450px] xl:w-[75%] xl:h-[500px] shadow-md rounded-xl bg-[#d98a45] relative">
+      <div className="flex flex-col sm:flex-row-reverse my-4 mx-8 w-[90%] md:w-[90%] md:h-[620px] lg:h-[450px] xl:w-[75%] xl:h-[500px] shadow-md rounded-xl bg-[#d98a45]">
         <div className="sm:w-[40%] h-[300px] sm:h-auto md:h-[620px] lg:h-[450px] xl:h-[500px]">
           <img
             src="/img/eating.jpg"
@@ -69,7 +69,7 @@ export function Cta() {
                 className="pl-2 rounded-lg h-10 lg:h-12 border border-[#45260A] focus:outline-none focus:ring-2 focus:ring-[#45260A] text-sm bg-white"
                 required
               >
-                <option value="" disabled defaultValue>
+                <option value="" disabled selected>
                   Please choose one option
                 </option>
                 <option value="friends">Friends and family</option>
@@ -87,7 +87,6 @@ export function Cta() {
             </button>
           </form>
         </div>
-        {/* <div className="absolute inset-0 bg-[#d98a45]/20 z-10 rounded-xl"></div> */}
       </div>
     </section>
   );
