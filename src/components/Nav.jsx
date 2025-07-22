@@ -3,6 +3,7 @@ import "../styles/index.css";
 
 export function Nav() {
   const [showNav, setShowNav] = useState(false);
+  const navLinks = ["How it works", "Meals", "Testimonials", "Pricing"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,18 +41,11 @@ export function Nav() {
             </a>
           </div>
           <ul className="md:flex hidden md:gap-4 xl:gap-8 md:items-center md:font-medium md:text-base xl:text-xl md:text-[#333]">
-            <li className="nav-links-hover">
-              <a href="#">How it works</a>
-            </li>
-            <li className="nav-links-hover">
-              <a href="#">Meals</a>
-            </li>
-            <li className="nav-links-hover">
-              <a href="#">Testimonials</a>
-            </li>
-            <li className="nav-links-hover">
-              <a href="#">Pricing</a>
-            </li>
+            {navLinks.map((navLinks, i) => (
+              <li className="nav-links-hover" key={i}>
+                <a href="#">{navLinks}</a>
+              </li>
+            ))}
             <li className="bg-[#e67e22] text-[#fff] px-6 py-2 rounded-xl hover:bg-[#eb984e] transition-colors duration-100 ease-in-out">
               <a href="#">Try for free</a>
             </li>

@@ -78,6 +78,10 @@ body {
   @apply hover:text-[#e67e22] transition-colors duration-100 ease-in-out;
 }
 
+.mobile-nav {
+  @apply fixed top-0 left-0 w-full h-screen bg-[#333]/90 flex flex-col items-center justify-center gap-8 text-white text-2xl z-30 transition-transform duration-300 ease-in-out;
+}
+
 .nav-customer-img {
   @apply w-10 md:w-12 rounded-full object-cover border-2 border-[#fdf2e9] ml-[-15px];
 }

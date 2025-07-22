@@ -7,7 +7,9 @@ export function How() {
       className="py-8 xl:py-16 flex flex-col items-start xl:justify-center xl:items-center relative"
     >
       <div className="pl-8 xl:pl-[14%] self-start">
-        <h2 className="text-[14px] font-semibold text-[#d98a45]">HOW IT WORKS</h2>
+        <h2 className="text-[14px] font-semibold text-[#d98a45]">
+          HOW IT WORKS
+        </h2>
         <p className="font-bold text-3xl md:text-4xl xl:text-5xl text-[#333] py-4">
           Your daily dose of health in 3 simple steps
         </p>

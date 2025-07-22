@@ -1,6 +1,10 @@
+import { useState } from "react";
 import "../styles/index.css";
 
 export function Hero() {
+  const [isMobile, setIsMobile] = useState(false);
+  const navLinks = ["How it works", "Meals", "Testimonials", "Pricing"];
+
   return (
     <section id="hero" className="hero-container bg-[#fdf2e9] md:h-[75vh]">
       {/* Normal nav always at the top of hero */}
@@ -15,24 +19,45 @@ export function Hero() {
           </a>
         </div>
         <ul className="md:flex hidden md:gap-4 xl:gap-8 md:items-center md:font-medium md:text-base xl:text-xl md:text-[#333]">
-          <li className="nav-links-hover">
-            <a href="#">How it works</a>
-          </li>
-          <li className="nav-links-hover">
-            <a href="#">Meals</a>
-          </li>
-          <li className="nav-links-hover">
-            <a href="#">Testimonials</a>
-          </li>
-          <li className="nav-links-hover">
-            <a href="#">Pricing</a>
-          </li>
+          {navLinks.map((navLinks, i) => (
+            <li className="nav-links-hover" key={i}>
+              <a href="#">{navLinks}</a>
+            </li>
+          ))}
           <li className="bg-[#e67e22] text-[#fff] px-6 py-2 rounded-xl hover:bg-[#eb984e] transition-colors duration-100 ease-in-out">
             <a href="#">Try for free</a>
           </li>
         </ul>
-        <div className="md:hidden">
-          <img className="w-9" src="/img/menu-icon.svg" alt="menu-icon" />
+        {/* mobile-nav */}
+        <div className="md:hidden mobile">
+          <button
+            className="relative z-50"
+            onClick={() => setIsMobile((prev) => !prev)}
+          >
+            <img
+              className="w-9"
+              src={isMobile ? "/img/close-icon.svg" : "/img/menu-icon.svg"}
+              alt={isMobile ? "close menu" : "open menu"}
+            />
+          </button>
+          {isMobile && (
+            <ul
+              className={`mobile-nav ${isMobile ? "translate-x" : "translate-full"}`}
+            >
+              {navLinks.map((navLinks, i) => (
+                <li className="nav-links-hover" key={i}>
+                  <a href="#" onClick={() => setIsMobile(!isMobile)}>
+                    {navLinks}
+                  </a>
+                </li>
+              ))}
+              <li className="bg-[#e67e22] text-[#fff] px-6 py-2 rounded-xl hover:bg-[#eb984e] transition-colors duration-100 ease-in-out">
+                <a href="#" onClick={() => setIsMobile(!isMobile)}>
+                  Try for free
+                </a>
+              </li>
+            </ul>
+          )}
         </div>
       </nav>
 
@@ -56,36 +81,14 @@ export function Hero() {
           </div>
           <div className="flex items-center justify-center gap-8 md:gap-[52px] mt-8">
             <div className="flex">
-              <img
-                className="nav-customer-img-1"
-                src="/img/customers/customer-1.jpg"
-                alt="Customer photo"
-              />
-              <img
-                className="nav-customer-img"
-                src="/img/customers/customer-2.jpg"
-                alt="Customer photo"
-              />
-              <img
-                className="nav-customer-img"
-                src="/img/customers/customer-3.jpg"
-                alt="Customer photo"
-              />
-              <img
-                className="nav-customer-img"
-                src="/img/customers/customer-4.jpg"
-                alt="Customer photo"
-              />
-              <img
-                className="nav-customer-img"
-                src="/img/customers/customer-5.jpg"
-                alt="Customer photo"
-              />
-              <img
-                className="nav-customer-img"
-                src="/img/customers/customer-6.jpg"
-                alt="Customer photo"
-              />
+              {Array.from({ length: 6 }).map((_, i) => (
+                <img
+                  key={i}
+                  className={`nav-customer-img${i === 0 ? -1 : ""}`}
+                  src={`/img/customers/customer-${i + 1}.jpg`}
+                  alt="Customer photo"
+                />
+              ))}
             </div>
             <p className="pl-[-150px] text-sm md:text-base font-bold">
               <span className="font-bold text-sm md:text-base text-[#e67e22]">
